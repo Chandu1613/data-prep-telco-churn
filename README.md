@@ -9,21 +9,21 @@ This project performs data cleaning, exploratory data analysis (EDA), and prepro
 - **Features:** Demographics, service usage, contract types, billing.
 ---
 
-## Step 1: Load & Inspect
+## Load & Inspect
 
 - Loaded dataset from CSV
 - Found 7,043 rows and 21 columns
 - Checked for nulls, data types, and sample values
 ---
 
-## Step 2: Data Cleaning
+## Data Cleaning
 
 - Converted `TotalCharges` to float
 - Checked for duplicates
 - Dropped `customerID` (non-predictive)
 ---
 
-## Step 3: EDA – Target and Numeric Features
+## EDA – Target and Numeric Features
 
 - **Churn:** 26% churn rate, slight imbalance
 ![churn](output/churn_distribution.png)
@@ -33,7 +33,7 @@ This project performs data cleaning, exploratory data analysis (EDA), and prepro
 ![monthly](output/monthly_charges_boxplot.png)
 ---
 
-## Step 4: Correlation & Contract Analysis
+## Correlation & Contract Analysis
 
 - Customers with longer `tenure` are less likely to `Churn`, indicating a negative correlation between
 - Strong positive correlation between `TotalCharges` and `MonthlyCharges`, which makes sense, since TotalCharges are typically accumulated over time based on monthly billing.
@@ -60,7 +60,7 @@ We visualized and removed outliers from key numeric columns using the IQR method
 
 We encoded categorical variables to make the dataset fully numeric and ML-ready:
 
-### 🔹 Binary Feature Encoding
+### Binary Feature Encoding
 The following binary categorical columns were encoded using `LabelEncoder`:
 
 - `gender` (Female=0, Male=1)
@@ -72,7 +72,7 @@ The following binary categorical columns were encoded using `LabelEncoder`:
 
 This approach ensures consistent, reproducible label encoding that can be saved and applied in future pipelines.
 
-### 🔹 One-Hot Encoding for Multi-class Features
+### One-Hot Encoding for Multi-class Features
 We used `pd.get_dummies()` with `drop_first=True` for the following features:
 
 - `MultipleLines`
@@ -87,4 +87,10 @@ We used `pd.get_dummies()` with `drop_first=True` for the following features:
 - `PaymentMethod`
 
 This avoids the dummy variable trap while retaining full interpretability.
+---
+
+## Feature Scaling
+
+- Standardized `tenure`, `MonthlyCharges`, and `TotalCharges`
+- Normalized values are centered with mean=0 and std=1
 ---
