@@ -22,3 +22,13 @@ This project performs data cleaning, exploratory data analysis (EDA), and prepro
 - Checked for duplicates
 - Dropped `customerID` (non-predictive)
 ---
+
+## Step 3: EDA – Target and Numeric Features
+
+- **Churn:** 26% churn rate, slight imbalance
+- **Tenure:** - Mid-range tenure (20–60 months) has fewer customers—maybe a good place to look for churn risks
+- **MonthlyCharges:** Churners pay slightly more per month
+
+![churn](output/churn_distribution.png)
+![tenure](output/tenure_distribution.png)
+![monthly](output/monthly_charges_boxplot.png)
