@@ -54,3 +54,37 @@ We visualized and removed outliers from key numeric columns using the IQR method
 ![monthlycharges](output/MonthlyCharges_boxplot.png)
 - `TotalCharges` was skewed with several heavy outliers
 ![totalcharges](output/TotalCharges_boxplot.png)
+---
+
+## Categorical Feature Encoding
+
+We encoded categorical variables to make the dataset fully numeric and ML-ready:
+
+### 🔹 Binary Feature Encoding
+The following binary categorical columns were encoded using `LabelEncoder`:
+
+- `gender` (Female=0, Male=1)
+- `Partner` (No=0, Yes=1)
+- `Dependents` (No=0, Yes=1)
+- `PhoneService` (No=0, Yes=1)
+- `PaperlessBilling` (No=0, Yes=1)
+- `Churn` (No=0, Yes=1)
+
+This approach ensures consistent, reproducible label encoding that can be saved and applied in future pipelines.
+
+### 🔹 One-Hot Encoding for Multi-class Features
+We used `pd.get_dummies()` with `drop_first=True` for the following features:
+
+- `MultipleLines`
+- `InternetService`
+- `OnlineSecurity`
+- `OnlineBackup`
+- `DeviceProtection`
+- `TechSupport`
+- `StreamingTV`
+- `StreamingMovies`
+- `Contract`
+- `PaymentMethod`
+
+This avoids the dummy variable trap while retaining full interpretability.
+---
