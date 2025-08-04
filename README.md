@@ -94,3 +94,9 @@ This avoids the dummy variable trap while retaining full interpretability.
 - Standardized `tenure`, `MonthlyCharges`, and `TotalCharges`
 - Normalized values are centered with mean=0 and std=1
 ---
+
+## Final Dataset Ready
+
+- Cleaned, encoded, and scaled
+- Shape: [7032 rows × 31 columns]
+- No missing values. Ready for modeling!
