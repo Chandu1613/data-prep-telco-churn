@@ -26,9 +26,19 @@ This project performs data cleaning, exploratory data analysis (EDA), and prepro
 ## Step 3: EDA – Target and Numeric Features
 
 - **Churn:** 26% churn rate, slight imbalance
-- **Tenure:** - Mid-range tenure (20–60 months) has fewer customers—maybe a good place to look for churn risks
-- **MonthlyCharges:** Churners pay slightly more per month
-
 ![churn](output/churn_distribution.png)
+- **Tenure:** - Mid-range tenure (20–60 months) has fewer customers—maybe a good place to look for churn risks
 ![tenure](output/tenure_distribution.png)
+- **MonthlyCharges:** Churners pay slightly more per month
 ![monthly](output/monthly_charges_boxplot.png)
+---
+
+## Step 4: Correlation & Contract Analysis
+
+- Customers with longer `tenure` are less likely to `Churn`, indicating a negative correlation between
+- Strong positive correlation between `TotalCharges` and `MonthlyCharges`, which makes sense, since TotalCharges are typically accumulated over time based on monthly billing.
+![correlation](output/correlation_heatmap.png)
+
+- Customers with Month-to-month contracts show the highest churn rate.
+- over 47% of churned customers are on Month-to-month contracts, while churn among Two-year contract holders is very minimal
+![contract](output/churn_by_contract.png)
