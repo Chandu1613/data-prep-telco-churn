@@ -42,3 +42,15 @@ This project performs data cleaning, exploratory data analysis (EDA), and prepro
 - Customers with Month-to-month contracts show the highest churn rate.
 - over 47% of churned customers are on Month-to-month contracts, while churn among Two-year contract holders is very minimal
 ![contract](output/churn_by_contract.png)
+---
+
+## Outlier Detection and Removal
+
+We visualized and removed outliers from key numeric columns using the IQR method.
+
+- `tenure` had a clean distribution (little change)
+![](output/TotalCharges_boxplot_before.png)
+- `MonthlyCharges` had some high outliers removed
+![](output/MonthlyCharges_boxplot_before.png)
+- `TotalCharges` was skewed with several heavy outliers
+![](output/tenure_boxplot_before.png)
