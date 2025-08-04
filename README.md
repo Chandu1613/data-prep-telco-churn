@@ -49,8 +49,8 @@ This project performs data cleaning, exploratory data analysis (EDA), and prepro
 We visualized and removed outliers from key numeric columns using the IQR method.
 
 - `tenure` had a clean distribution (little change)
-![tenur](output/tenure_boxplot_before.png)
+![tenur](output/tenure_boxplot.png)
 - `MonthlyCharges` had some high outliers removed
-![monthlycharges](output/MonthlyCharges_boxplot_before.png)
+![monthlycharges](output/MonthlyCharges_boxplot.png)
 - `TotalCharges` was skewed with several heavy outliers
-![totalcharges](output/TotalCharges_boxplot_before.png)
+![totalcharges](output/TotalCharges_boxplot.png)
