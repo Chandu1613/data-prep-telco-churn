@@ -14,3 +14,11 @@ This project performs data cleaning, exploratory data analysis (EDA), and prepro
 - Loaded dataset from CSV
 - Found 7,043 rows and 21 columns
 - Checked for nulls, data types, and sample values
+---
+
+## Step 2: Data Cleaning
+
+- Converted `TotalCharges` to float
+- Checked for duplicates
+- Dropped `customerID` (non-predictive)
+---
